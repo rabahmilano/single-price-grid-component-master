@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--light-gray);
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+li {
+  list-style: none;
+  font-size: 14px;
+}
+
+main {
+  width: 85%;
+  max-width: 630px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 4rem auto;
+}
+main div {
+  padding: 1.5rem;
+}
+
+                            /* first div */
+main div:nth-child(1) {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+main div:nth-child(1) h2 {
+  color: var(--cyan);
+}
+main div:nth-child(1) h3 {
+  color: var(--bright-yellow);
+  margin: 1.2rem 0;
+  font-size: 15px;
+}
+main div:nth-child(1) li {
+  color: var(--grayish-blue);
+  line-height: 1.7em;
+}
+
+                            /* second div */
+main div:nth-child(2),
+main div:nth-child(3) {
+  background-color: var(--cyan);
+  color: var(--light-gray);
+}
+main div:nth-child(2) .price {
+  font-size: 14px;
+  margin: 1rem 0 0.4rem;
+}
+main div:nth-child(2) .price span {
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 10px;
+  color: white;
+  opacity: 1;
+}
+main div:nth-child(2) .btn {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: var(--bright-yellow);
+  padding: 1rem 0;
+  margin-top: 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+                      /* third div */
+main div:nth-child(3) {
+  opacity: 0.8;
+  border-radius: 0 0 10px 10px;
+}
+main div:nth-child(3) ul {
+  margin-top: 1rem;
+}
+main div:nth-child(3) li {
+  line-height: 1.5em;
+  opacity: 0.8;
+}
+
+                    /* footer section */
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+                    /* responsive layout */
+@media screen and (min-width: 761px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main div {
+    padding: 2.5rem;
+  }
+  main div:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+  main div:nth-child(2) {
+    border-radius: 0 0 0 10px;
+  }
+  main div:nth-child(3) {
+    border-radius: 0 0 10px 0;
+  }
+}
